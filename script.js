@@ -5,15 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     openPages()
 })
 
-// function load() {
-//     const loader = document.querySelector('.page-loader')
-//     const line = loader.querySelector('.page-loader__line')
-//
-//     setTimeout(() => line.classList.add('page-loader__line_loaded'), 1)
-//     setTimeout(() => loader.classList.add('page-loader_disable'), 3010)
-//     setTimeout(() => loader.classList.add('page-loader_removed'), 4010)
-//
-// }
+
 
 function removePrepositionsFromEndOfLines() {
     const els = []
@@ -29,13 +21,7 @@ function removePrepositionsFromEndOfLines() {
     })
 }
 
-function replacePrepositions(text) {
-    // Регулярное выражение для предлогов
-    const prepositions = /\b(в|на|у|за|к|с|о|под|над|по|из|об|от|до|без|для|про|через|при|со|обо)\s+/gi;
 
-    // Замена пробела на неразрывный пробел &nbsp;
-    return text.replace(prepositions, '$1&nbsp;');
-}
 const nav = document.querySelector('.page-nav');
 const initialNavTop = nav.offsetTop; // Сохраняем изначальную позицию навигации
 window.addEventListener('scroll', function() {
