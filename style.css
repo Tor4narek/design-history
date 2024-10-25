@@ -1,0 +1,443 @@
+
+@font-face {
+    font-family: 'LavaPro';
+    src: url('assets/LavaPro-Medium.woff2') format('woff2'),
+    url('assets/LavaPro-Medium.woff') format('woff'),
+    url('assets/LavaPro-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LavaPro';
+    src: url('assets/LavaPro-MediumItalic.woff2') format('woff2'),
+    url('assets/LavaPro-MediumItalic.woff') format('woff'),
+    url('assets/LavaPro-MediumItalic.ttf') format('truetype');
+    font-weight: 500;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LavaPro';
+    src: url('assets/LavaPro-Bold.woff2') format('woff2'),
+    url('assets/LavaPro-Bold.woff') format('woff'),
+    url('assets/LavaPro-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LavaPro';
+    src: url('assets/LavaPro-BoldItalic.woff2') format('woff2'),
+    url('assets/LavaPro-BoldItalic.woff') format('woff'),
+    url('assets/LavaPro-BoldItalic.ttf') format('truetype');
+    font-weight: 700;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: 'LavaPro';
+    src: url('assets/LavaPro-Heavy.woff2') format('woff2'),
+    url('assets/LavaPro-Heavy.woff') format('woff'),
+    url('assets/LavaPro-Heavy.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'LavaPro';
+    src: url('assets/LavaPro-HeavyItalic.woff2') format('woff2'),
+    url('assets/LavaPro-HeavyItalic.woff') format('woff'),
+    url('assets/LavaPro-HeavyItalic.ttf') format('truetype');
+    font-weight: 900;
+    font-style: italic;
+}
+
+/* Применение стилей */
+.lava-thin {
+    font-family: "LavaPro", serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.lava-thin-italic {
+    font-family: "LavaPro", serif;
+    font-weight: 100;
+    font-style: italic;
+}
+
+.lava-medium {
+    font-family: "LavaPro", serif;
+    font-weight: 500;
+    font-style: normal;
+}
+
+.lava-medium-italic {
+    font-family: "LavaPro", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.lava-bold {
+    font-family: "LavaPro", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.lava-bold-italic {
+    font-family: "LavaPro", serif;
+    font-weight: 700;
+    font-style: italic;
+}
+
+.lava-heavy {
+    font-family: "LavaPro", serif;
+    font-weight: 900;
+    font-style: normal;
+}
+
+.lava-heavy-italic {
+    font-family: "LavaPro", serif;
+    font-weight: 900;
+    font-style: italic;
+}
+
+
+
+*::-webkit-scrollbar {
+    display: none;
+}
+
+*, *:link *:visited, *:active,
+::before,
+::after {
+    padding: 0;
+    margin: 0;
+
+    border: none;
+
+    background: none;
+
+    border-radius: 0;
+
+    line-height: 1.5;
+
+    color: inherit;
+
+    text-decoration: none;
+
+    box-sizing: border-box;
+
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;
+    font-family: LavaPro;
+}
+
+.page-body {
+
+    grid-template-areas: "header header" "main nav" "footer footer";
+    grid-template-columns:  100%;
+    grid-template-rows: auto minmax(100vh, auto) auto;
+    justify-content: center;
+
+    font-size: calc(5px + 1vw);
+
+    background-color: #ffca92;
+
+
+    color: #1A0006;
+}
+
+.page-header {
+
+    font-family: "LavaPro";
+    background-color: #800020 ;
+    color: #ffffff;
+    min-height: 100vh;
+
+
+}
+.page-header_headings{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+
+}
+
+
+
+.page-header_headings :before {
+    animation: grain 8s steps(10) infinite;
+    background-image: url('https://raw.githubusercontent.com/taimoorshahzada/Film-Grain-Noise-Effect-on-Background-in-Website-using-Pure-CSS/refs/heads/main/noise.gif');
+    content: "";
+    height: 300%;
+    width: 300%;
+    left: -100%;
+    top: -110%;
+    opacity: 0.05;
+    position: fixed;
+}
+
+@keyframes grain {
+    0%, 100% { transform:translate(0, 0) }
+    10% { transform:translate(-5%, -10%) }
+    20% { transform:translate(-15%, 5%) }
+    30% { transform:translate(5%, -25%) }
+    40% { transform:translate(-5%, 25%) }
+    50% { transform:translate(-15%, 10%) }
+    60% { transform:translate(15%, 0%) }
+    70% { transform:translate(0%, 15%) }
+    80% { transform:translate(5%, 35%) }
+    90% { transform:translate(-10%, 10%) }
+}
+.page-header__heading {
+    align-self: center;
+    margin-top: 10%;
+    width: 50%;
+    text-align: left;
+    font-size: 5.25rem;
+    line-height: 4.5rem;
+    font-style: italic;
+    color: #FAFAD2;
+}
+.page-header__subheading{
+    align-self: center;
+    text-align: justify;
+    font-size: 1.5rem;
+    color: #FAFAD2;
+    max-width: 50%;
+    margin-top: 10%;
+}
+
+.page-main {
+    display: none;
+
+    opacity: 1;
+
+    grid-area: main;
+
+    background-color: #FAFAD2;
+
+
+
+    padding: 2rem 3rem;
+
+    transition: transform .3s ease-out, opacity .3s ease-out;
+
+    transform: translateY(0);
+}
+
+.page-main_active {
+    display: block;
+}
+
+.page-main_to-hidden {
+    opacity: 0.5;
+
+    transition: all .3s ease-in;
+}
+
+.article {
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.article__heading_1 {
+    font-size: 3rem;
+    margin-top: 2rem;
+    font-family: "LavaPro", serif;
+    font-weight: 900;
+    font-style: normal;
+    text-align: center;
+}
+.article__heading_2{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+    font-family: "LavaPro", serif;
+    font-weight: 500;
+    font-style: normal;
+    text-align: left;
+    line-height: 2.5rem;
+}
+.article__subheading{
+    font-size: 1rem;
+    margin-bottom: 1rem;
+    font-family: "LavaPro", serif;
+    font-style: italic;
+    text-align: left;
+}
+
+.article__2-heading {
+    font-size: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+}
+
+.article__paragraph {
+    font-family: "LavaPro", serif;
+    font-weight: 400;
+    font-style: normal;
+
+    margin-bottom: 1.2rem;
+
+}
+
+.article__bold {
+    font-family: "LavaPro", serif;
+    font-weight: 700;
+    font-style: normal;
+}
+
+.article__italic {
+    font-family: "LavaPro", serif;
+    font-weight: 500;
+    font-style: italic;
+}
+
+.article__highlight {
+    padding: 0 .5rem .2rem;
+    background-color: #dcd7fd;
+    border-radius: 6rem;
+}
+
+.article__blockquote {
+
+
+    grid-gap: 1rem;
+
+    background-color: #800020 ;
+
+    padding: 2rem 2rem 2rem 5rem;
+
+    margin-bottom: 1rem;
+}
+
+.quote {
+
+    width: 1rem;
+        min-height: 100% ;
+
+    background-color: #FAFAD2;
+}
+.article__blockquote{
+    display: flex;
+    flex-direction: row;
+    border-radius: 10px;
+    justify-content: center;
+
+}
+.article__copyright {
+    font-family: "LavaPro", serif;
+    font-weight: 400;
+    font-style: italic;
+}
+.article__blockquote p{
+   color: #FAFAD2;
+    font-size: 1rem;
+}
+
+
+.page-nav {
+    position: absolute;
+    z-index: 1000;
+    margin-left: 80%;
+    margin-top: 25%;
+    padding: .5rem;
+    font-size: 1.3rem;
+    color: #FAFAD2;
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+
+}
+
+.page-nav.fixed {
+    position: fixed;
+    top: 0;
+    margin-top: 0;
+    z-index: 1000;
+}
+.nav_dark_color{
+    transition: transform .3s ease-out, color .3s ease-out;
+    color: #800020 ;
+}
+
+.page-nav a:hover{
+    opacity: 0.5;
+    transition: transform .3s ease-out, opacity .3s ease-out;
+
+}
+.nav__el {
+    border-radius: .5rem;
+    overflow: hidden;
+    margin-bottom: .3rem;
+}
+
+.nav__el:last-child {
+    margin-bottom: 0;
+}
+
+.nav__el:first-child {
+    border-top-right-radius: 1.4rem;
+}
+
+.nav__el:last-child {
+    border-bottom-right-radius: 1.4rem;
+}
+
+.nav__button {
+    font-family: "LavaPro", serif;
+    font-weight: 500;
+    font-style: normal;
+
+    text-align: start;
+    width: 100%;
+    padding: .5rem 2rem;
+
+    font-size: 1.1rem;
+
+    transition: background-color 0.4s ease;
+}
+
+/*.nav__button:hover {*/
+/*    background-color: #dcd7fd;*/
+/*    cursor: pointer;*/
+/*}*/
+
+.nav__button_active {
+    text-decoration: underline;
+}
+
+.page-footer {
+    position: relative;
+
+    grid-area: footer;
+
+    background-color: rgb(128, 0, 32);
+    color: #ffbd4f;
+    flex-direction: column;
+    display: flex;
+    justify-content: center;
+    padding: 5rem 2rem 3rem;
+}
+.page-footer p{
+    color: #FAFAD2;
+    font-size: 1.2rem;
+    text-align: center;
+}
+
+/*.page-footer::after {*/
+/*    content: '';*/
+/*    position: absolute;*/
+/*    left: 0;*/
+/*    bottom: -1rem;*/
+/*    display: block;*/
+/*    width: 100%;*/
+/*    height: 1rem;*/
+
+/*    background-color: #430f1c;*/
+/*}*/
+
+.page-footer__dark-light {
+    color: #800020;
+}
